@@ -96,6 +96,16 @@ Where \<job-id\> is a unique identifier which is used for output filenames (mode
 
 * Finally, the average development dataset score across the four folds can be obtained using `calculate_SELD_metrics.py` script. Provide the directory where you dumped the file-wise results above and the reference metadata folder. Check the comments in the script for more description.
 
+## Results on development dataset
+
+
+| Dataset | Error rate | F score| DOA error | Frame recall |
+| ----| --- | --- | --- | --- |
+| Single channel | 0.34 | 79.7 % | 30.8&deg; | 84.3 % |
+| Multichannel |0.37 | 78.5 % | 35.4&deg; | 81.6 % |
+
+**Note:** The reported baseline system performance is not exactly reproducible due to varying setups. However, you should be able to obtain very similar results.
+
 ## DOA estimation: regression vs classification
 
 The DOA estimation can be approached as both a regression or a classification task. In the baseline, it is handled as regression task. In case you plan to use a classification approach check the `test_SELD_metrics.py` script in misc_files folder. It implements a classification version of DOA and also uses a corresponding metric function.
