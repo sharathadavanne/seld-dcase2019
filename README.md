@@ -18,13 +18,13 @@ In the benchmark method, the variables in the image below have the following val
 The SED output of the network is in the continuous range of [0 1] for each sound event in the dataset, and this value is thresholded to obtain a binary decision for the respective sound event activity as shown in figure below. Finally, the respective DOA estimates for these active sound event classes provide their spatial locations.
 
 <p align="center">
-   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/JSTSP_output_format_color.png" width="400" title="SELDnet output format">
+   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/DCASE2019_SELDnet_output.png" width="400" title="SELDnet output format">
 </p>
 
 The figure below visualizes the SELDnet input and outputs for one of the recordings in the dataset. The horizontal-axis of all sub-plots for a given dataset represents the same time frames, the vertical-axis for spectrogram sub-plot represents the frequency bins, vertical-axis for SED reference and prediction sub-plots represents the unique sound event class identifier, and for the DOA reference and prediction sub-plots, it represents the azimuth and elevation angles in degrees. The figures represents each sound event class and its associated DOA outputs with a unique color. Similar plot can be visualized on your results using the [provided script](misc_files/visualize_SELD_output.py).
 
 <p align="center">
-   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/SELDnet_output.png" width="400" title="SELDnet input and output visualization">
+   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/SELDnet_output.png" width="1100" title="SELDnet input and output visualization">
 </p>
 
 ## DATASETS
