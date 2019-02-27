@@ -1,6 +1,6 @@
 
 # DCASE 2019: Sound event localization and detection (SELD) task
-Sound event localization and detection (SELD) is the combined task of identifying the temporal onset and offset of a sound event, tracking the spatial location when active, and further associating a textual label describing the sound event. As part of [DCASE 2019](http://dcase.community/challenge2019/index), we are organizing an [SELD task](http://dcase.community/challenge2019/task-sound-event-localization-and-detection) with a multi-reverberant dataset synthesized using real-life impulse response (IR) collected at five different locations. This github page shares the benchmark method SELDnet and the dataset for the task. The paper describing the SELDnet can be found on [IEEExplore](https://ieeexplore.ieee.org/document/8567942 'Paper on IEEE Xplore') and on [Arxiv](https://arxiv.org/pdf/1807.00129.pdf 'Paper on Arxiv').
+Sound event localization and detection (SELD) is the combined task of identifying the temporal onset and offset of a sound event, tracking the spatial location when active, and further associating a textual label describing the sound event. As part of [DCASE 2019](http://dcase.community/challenge2019/index), we are organizing an [SELD task](http://dcase.community/challenge2019/task-sound-event-localization-and-detection) with a multi-reverberant dataset synthesized using real-life impulse response (IR) collected at five different locations. This github page shares the benchmark method, SELDnet, and the dataset for the task. The paper describing the SELDnet can be found on [IEEExplore](https://ieeexplore.ieee.org/document/8567942 'Paper on IEEE Xplore') and on [Arxiv](https://arxiv.org/pdf/1807.00129.pdf 'Paper on Arxiv').
    
 If you are using this code or the datasets in any format, then please consider citing the following paper
 
@@ -12,19 +12,19 @@ The SELDnet architecture is as shown below. The input is the multichannel audio,
 In the benchmark method, the variables in the image below have the following values, T = 128, M = 2048, C = 4, P = 64, MP<sub>1</sub> = MP<sub>2</sub> = 8, MP<sub>3</sub> = 4, Q = R = 128, N = 11.
 
 <p align="center">
-   <img src="https://github.com/sharathadavanne/seld-net/blob/master/images/DCASE2019_SELDnet.png" width="400" title="SELDnet Architecture">
+   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/DCASE2019_SELDnet.png" width="400" title="SELDnet Architecture">
 </p>
 
 The SED output of the network is in the continuous range of [0 1] for each sound event in the dataset, and this value is thresholded to obtain a binary decision for the respective sound event activity as shown in figure below. Finally, the respective DOA estimates for these active sound event classes provide their spatial locations.
 
 <p align="center">
-   <img src="https://github.com/sharathadavanne/seld-net/blob/master/images/JSTSP_output_format_color.png" width="400" title="SELDnet output format">
+   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/JSTSP_output_format_color.png" width="400" title="SELDnet output format">
 </p>
 
 The figure below visualizes the SELDnet input and outputs for one of the recordings in the dataset. The horizontal-axis of all sub-plots for a given dataset represents the same time frames, the vertical-axis for spectrogram sub-plot represents the frequency bins, vertical-axis for SED reference and prediction sub-plots represents the unique sound event class identifier, and for the DOA reference and prediction sub-plots, it represents the azimuth and elevation angles in degrees. The figures represents each sound event class and its associated DOA outputs with a unique color. Similar plot can be visualized on your results using the [provided script](misc_files/visualize_SELD_output.py).
 
 <p align="center">
-   <img src="https://github.com/sharathadavanne/seld-net/blob/master/images/SELDnet_output.png" width="400" title="SELDnet input and output visualization">
+   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/SELDnet_output.png" width="400" title="SELDnet input and output visualization">
 </p>
 
 ## DATASETS
@@ -44,18 +44,18 @@ More details on the recording procedure and dataset can be read on the [DCASE 20
 ## Getting Started
 
 This repository consists of multiple Python scripts forming one big architecture used to train the SELDnet.
-* The batch_feature_extraction.py is a standalone wrapper script, that extracts the features, labels, and normalizes the training and test split features for a given dataset. Make sure you update the location of the downloaded datasets before.
-* The parameter.py script consists of all the training, model, and feature parameters. If a user has to change some parameters, they have to create a sub-task with unique id here. Check code for examples.
-* The cls_feature_class.py script has routines for labels creation, features extraction and normalization.
-* The cls_data_generator.py script provides feature + label data in generator mode for training.
-* The keras_model.py script implements the SELDnet architecture.
-* The evaluation_metrics.py script, implements the core metrics from sound event detection evaluation module http://tut-arg.github.io/sed_eval/ and the DOA metrics explained in the paper.
-* The seld.py is a wrapper script that trains the SELDnet. The training stops when the SELD error (check paper) stops improving.
+* The `batch_feature_extraction.py` is a standalone wrapper script, that extracts the features, labels, and normalizes the training and test split features for a given dataset. Make sure you update the location of the downloaded datasets before.
+* The `parameter.py` script consists of all the training, model, and feature parameters. If a user has to change some parameters, they have to create a sub-task with unique id here. Check code for examples.
+* The `cls_feature_class.py` script has routines for labels creation, features extraction and normalization.
+* The `cls_data_generator.py` script provides feature + label data in generator mode for training.
+* The `keras_model.py` script implements the SELDnet architecture.
+* The `evaluation_metrics.py` script, implements the core metrics from sound event detection evaluation module http://tut-arg.github.io/sed_eval/ and the DOA metrics explained in the paper.
+* The `seld.py` is a wrapper script that trains the SELDnet. The training stops when the SELD error (check paper) stops improving.
 
 Additionally, we also provide supporting scripts that help analyse the dataset and results.
- * check_dataset_distribution.py visualizes the dataset distribution in different configurations.
- * visualize_SELD_output.py script to visualize the SELDnet output
- * test_SELD_metrics.py test script to evaluate the different metrics employed
+ * `check_dataset_distribution.py` visualizes the dataset distribution in different configurations.
+ * `visualize_SELD_output.py` script to visualize the SELDnet output
+ * `test_SELD_metrics.py` test script to evaluate the different metrics employed
 
 
 ### Prerequisites
@@ -69,9 +69,9 @@ In order to quickly train SELDnet follow the steps below.
 
 * For the chosen dataset (Ambisonic or Microphone), download the respective zip file. This contains both the audio files and the respective metadata. Unzip the files under the same 'base_folder/', ie, if you are Ambisonic dataset, then the 'base_folder/' should have two folders - 'foa_dev/' and 'metadata_dev/' after unzipping.
 
-* Now update the respective dataset path in parameter.py script. For the above example, you will change `dataset_dir='base_folder/'`. Also provide a directory path `feat_label_dir` in the same parameter.py script where all the features and labels will be dumped. Make sure this folder has sufficient space. For example if you use the baseline configuration, you will need about 160 GB in total just for the features and labels.
+* Now update the respective dataset path in `parameter.py` script. For the above example, you will change `dataset_dir='base_folder/'`. Also provide a directory path `feat_label_dir` in the same `parameter.py` script where all the features and labels will be dumped. Make sure this folder has sufficient space. For example if you use the baseline configuration, you will need about 160 GB in total just for the features and labels.
 
-* Extract features from the downloaded dataset by running the batch_feature_extraction.py script. First, update the parameters in the script, check the python file for more comments. You can now run the script as shown below. This will dump the normalized features and labels here. Since feature extraction is a one-time thing, this script is standalone and does not use the parameter.py file.
+* Extract features from the downloaded dataset by running the `batch_feature_extraction.py` script. First, update the parameters in the script, check the python file for more comments. You can now run the script as shown below. This will dump the normalized features and labels here. Since feature extraction is a one-time thing, this script is standalone and does not use the `parameter.py` file.
 
 ```
 python batch_feature_extraction.py
@@ -82,30 +82,30 @@ You can now train the SELDnet using default parameters using
 python seld.py
 ```
 
-* Additionally, you can add/change parameters by using a unique identifier \<task-id\> in if-else loop as seen in the parameter.py script and call them as following
+* Additionally, you can add/change parameters by using a unique identifier \<task-id\> in if-else loop as seen in the `parameter.py` script and call them as following
 ```
 python seld.py <task-id> <job-id>
 ```
 Where \<job-id\> is a unique identifier which is used for output filenames (models, training plots). You can use any number or string for this.
 
-* By default, the code runs in `quick_test = True` mode. This trains the network for 2 epochs on only 2 mini-batches. Once you get to run the code sucessfully, set `quick_test = False` in parameter.py script and train on the entire data.
+* By default, the code runs in `quick_test = True` mode. This trains the network for 2 epochs on only 2 mini-batches. Once you get to run the code sucessfully, set `quick_test = False` in `parameter.py` script and train on the entire data.
 
-* The code also plots training curves, intermediate results and saves models in the `model_dir` path provided by the user in parameter.py file.
+* The code also plots training curves, intermediate results and saves models in the `model_dir` path provided by the user in `parameter.py` file.
 
-* In order to visualize the output of SELDnet and for submission of results, set `dcase_output=True` and provide `dcase_dir` directory. This will dump file-wise results in the directory, which can be individually visualized using misc_files/visualize_SELD_output.py script.
+* In order to visualize the output of SELDnet and for submission of results, set `dcase_output=True` and provide `dcase_dir` directory. This will dump file-wise results in the directory, which can be individually visualized using `misc_files/visualize_SELD_output.py` script.
 
-* Finally, the average development dataset score across the four folds can be obtained using calculate_SELD_metrics.py script. Provide the directory where you dumped the file-wise results above and the reference metadata folder. Check the comments in the script for more description.
+* Finally, the average development dataset score across the four folds can be obtained using `calculate_SELD_metrics.py` script. Provide the directory where you dumped the file-wise results above and the reference metadata folder. Check the comments in the script for more description.
 
 ## DOA estimation: regression vs classification
 
-The DOA estimation can be approached as both a regression or a classification task. In the baseline, it is handled as regression task. In case you plan to use a classification approach check the test_SELD_metrics.py script in misc_files folder. It implements a classification version of DOA and also uses a corresponding metric function.
+The DOA estimation can be approached as both a regression or a classification task. In the baseline, it is handled as regression task. In case you plan to use a classification approach check the `test_SELD_metrics.py` script in misc_files folder. It implements a classification version of DOA and also uses a corresponding metric function.
 
 
 ## Submission
 
-* Before submission, make sure your SELD results are right by visualizing the results using misc_files/visualize_SELD_output.py script
+* Before submission, make sure your SELD results are right by visualizing the results using `misc_files/visualize_SELD_output.py` script
 * Make sure the file-wise output you are submitting is produced at 20 ms hop length. At this hop length a 60 s audio file has 3000 frames.
-* Calculate your development score for the four splits using the calculate_SELD_metrics.py script. Check if the average results you are obtaining here is comparable to the results you were obtaining during training.
+* Calculate your development score for the four splits using the `calculate_SELD_metrics.py` script. Check if the average results you are obtaining here is comparable to the results you were obtaining during training.
 
 For more information on the submission file formats [check the website](http://dcase.community/challenge2019/task-sound-event-localization-and-detection#submission)
 
