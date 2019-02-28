@@ -1,5 +1,5 @@
 -----------COPYRIGHT NOTICE STARTS WITH THIS LINE------------
-Copyright (c) 2017 Tampere University of Technology and its licensors
+Copyright (c) 2019 Tampere University and its licensors
 All rights reserved.
 
 Permission is hereby granted, without written agreement and without
@@ -12,9 +12,8 @@ convolutional recurrent neural network" and composed of files with
 code in the Python programming language. This grant is only for experimental and
 non-commercial purposes, provided that the copyright notice in its entirety
 appear in all copies of this Work, and the original source of this Work,
-Audio Research Group, Lab. of Signal Processing at Tampere University
-of Technology, is acknowledged in any publication that reports research
-using this Work.
+Audio Research Group at Tampere University, is acknowledged in any publication
+that reports research using this Work.
 
 Any commercial use of the Work or any part thereof is strictly prohibited.
 Commercial use include, but is not limited to:
@@ -22,16 +21,16 @@ Commercial use include, but is not limited to:
 - selling or distributing the results or content achieved by use of the Work
 - providing services by using the Work.
 
-IN NO EVENT SHALL TAMPERE UNIVERSITY OF TECHNOLOGY OR ITS LICENSORS BE LIABLE TO
+IN NO EVENT SHALL TAMPERE UNIVERSITY OR ITS LICENSORS BE LIABLE TO
 ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES
 ARISING OUT OF THE USE OF THIS WORK AND ITS DOCUMENTATION, EVEN IF TAMPERE
-UNIVERSITY OF TECHNOLOGY OR ITS LICENSORS HAS BEEN ADVISED OF THE POSSIBILITY
+UNIVERSITY OR ITS LICENSORS HAS BEEN ADVISED OF THE POSSIBILITY
 OF SUCH DAMAGE.
 
-TAMPERE UNIVERSITY OF TECHNOLOGY AND ALL ITS LICENSORS SPECIFICALLY DISCLAIMS
+TAMPERE UNIVERSITY AND ALL ITS LICENSORS SPECIFICALLY DISCLAIMS
 ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE WORK PROVIDED HEREUNDER
-IS ON AN "AS IS" BASIS, AND THE TAMPERE UNIVERSITY OF TECHNOLOGY HAS NO OBLIGATION
+IS ON AN "AS IS" BASIS, AND THE TAMPERE UNIVERSITY HAS NO OBLIGATION
 TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 -----------COPYRIGHT NOTICE ENDS WITH THIS LINE------------

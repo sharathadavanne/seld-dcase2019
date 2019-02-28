@@ -15,6 +15,8 @@ In the benchmark method, the variables in the image below have the following val
    <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/DCASE2019_SELDnet.png" width="400" title="SELDnet Architecture">
 </p>
 
+
+
 The SED output of the network is in the continuous range of [0 1] for each sound event in the dataset, and this value is thresholded to obtain a binary decision for the respective sound event activity as shown in figure below. Finally, the respective DOA estimates for these active sound event classes provide their spatial locations.
 
 <p align="center">
@@ -31,12 +33,31 @@ The figure below visualizes the SELDnet input and outputs for one of the recordi
 
 The participants can choose one of the two following datasets,
 
- * **TUT Sound Events 2019 - Ambisonic**
- * **TUT Sound Events 2019 - Microphone**
+ * **TAU Spatial Sound Events 2019 - Ambisonic**
+ * **TAU Spatial Sound Events 2019 - Microphone Array**
 
-These datasets contain recordings from an identical scene, with **TUT Sound Events 2019 - Ambisonic** providing four-channel First-Order Ambisonic (FOA) recordings while  **TUT Sound Events 2019 - Microphone** provides four-channel directional microphone recordings from a tetrahedral array configuration. Both formats are extracted from the same microphone array, and additional information on the spatial characteristics of each format can be found below. The participants can choose one of the two datasets based on the audio format they prefer. Both the datasets, consists of a development and evaluation set. The development set consists of 400, one minute long recordings sampled at 48000 Hz, divided into four cross-validation splits of 100 recordings each. The evaluation set consists of 100, one-minute recordings. These recordings were synthesized using spatial room impulse response (IRs) collected from five indoor locations, at 504 unique combinations of azimuth-elevation-distance. Furthermore, in order to synthesize the recordings the collected IRs were convolved with [isolated sound events dataset from DCASE 2016 task 2](http://www.cs.tut.fi/sgn/arg/dcase2016/task-sound-event-detection-in-synthetic-audio#audio-dataset). Finally, to create a realistic sound scene recording, natural ambient noise collected in the IR recording locations was added to the synthesized recordings such that the average SNR of the sound events was 30 dB.
+These datasets contain recordings from an identical scene, with **TAU Spatial Sound Events 2019 - Ambisonic** providing four-channel First-Order Ambisonic (FOA) recordings while  **TAU Spatial Sound Events 2019 - Microphone Array** provides four-channel directional microphone recordings from a tetrahedral array configuration. Both formats are extracted from the same microphone array, and additional information on the spatial characteristics of each format can be found below. The participants can choose one of the two, or both the datasets based on the audio format they prefer. Both the datasets, consists of a development and evaluation set. The development set consists of 400, one minute long recordings sampled at 48000 Hz, divided into four cross-validation splits of 100 recordings each. The evaluation set consists of 100, one-minute recordings. These recordings were synthesized using spatial room impulse response (IRs) collected from five indoor locations, at 504 unique combinations of azimuth-elevation-distance. Furthermore, in order to synthesize the recordings the collected IRs were convolved with [isolated sound events dataset from DCASE 2016 task 2](http://www.cs.tut.fi/sgn/arg/dcase2016/task-sound-event-detection-in-synthetic-audio#audio-dataset). Finally, to create a realistic sound scene recording, natural ambient noise collected in the IR recording locations was added to the synthesized recordings such that the average SNR of the sound events was 30 dB.
 
-The IRs were collected in Finland by Tampere University between 12/2017 - 06/2018. The data collection received funding from the European Research Council, grant agreement 637422 EVERYSOUND.
+The eleven sound event classes used in the dataset and their corresponding index values required for the submission format are as following
+
+| Sound class| Index |
+| ----| ---- |
+| knock | 0 |
+| drawer | 1 |
+| clearthroat | 2 |
+| phone | 3 |
+| keysDrop | 4 |
+| speech | 5 |
+| keyboard | 6 |
+| pageturn | 7 |
+| cough | 8 |
+| doorslam | 9 |
+| laughter | 10 |
+
+This mapping is also available as a python dictionary in the `cls_feature_class.py` script.
+
+
+The IR recordings were collected in Finland by Tampere University between 12/2017 - 06/2018. The data collection received funding from the European Research Council, grant agreement 637422 EVERYSOUND.
 
 More details on the recording procedure and dataset can be read on the [DCASE 2019 task webpage](http://dcase.community/challenge2019/task-sound-event-localization-and-detection).
 
@@ -101,8 +122,8 @@ Where \<job-id\> is a unique identifier which is used for output filenames (mode
 
 | Dataset | Error rate | F score| DOA error | Frame recall |
 | ----| --- | --- | --- | --- |
-| Single channel | 0.34 | 79.7 % | 30.8&deg; | 84.3 % |
-| Multichannel |0.37 | 78.5 % | 35.4&deg; | 81.6 % |
+| Ambisonic | 0.34 | 79.7 % | 30.8&deg; | 84.3 % |
+| Microphone Array |0.37 | 78.5 % | 35.4&deg; | 81.6 % |
 
 **Note:** The reported baseline system performance is not exactly reproducible due to varying setups. However, you should be able to obtain very similar results.
 
