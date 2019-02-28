@@ -31,7 +31,7 @@ The figure below visualizes the SELDnet input and outputs for one of the recordi
 
 ## DATASETS
 
-The participants can choose one of the two following datasets,
+The participants can choose either of the two or both the following datasets,
 
  * **TAU Spatial Sound Events 2019 - Ambisonic**
  * **TAU Spatial Sound Events 2019 - Microphone Array**
@@ -60,6 +60,8 @@ This mapping is also available as a python dictionary in the `cls_feature_class.
 The IR recordings were collected in Finland by Tampere University between 12/2017 - 06/2018. The data collection received funding from the European Research Council, grant agreement 637422 EVERYSOUND.
 
 More details on the recording procedure and dataset can be read on the [DCASE 2019 task webpage](http://dcase.community/challenge2019/task-sound-event-localization-and-detection).
+
+The two datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**](https://doi.org/10.5281/zenodo.2580091) Development dataset [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2580091.svg)](https://doi.org/10.5281/zenodo.2580091)
 
 
 ## Getting Started
