@@ -12,7 +12,7 @@ The SELDnet architecture is as shown below. The input is the multichannel audio,
 In the benchmark method, the variables in the image below have the following values, T = 128, M = 2048, C = 4, P = 64, MP<sub>1</sub> = MP<sub>2</sub> = 8, MP<sub>3</sub> = 4, Q = R = 128, N = 11.
 
 <p align="center">
-   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/DCASE2019_SELDnet.png" width="400" title="SELDnet Architecture">
+   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/DCASE2019_SELDnet.png" width="600" title="SELDnet Architecture">
 </p>
 
 
@@ -26,7 +26,7 @@ The SED output of the network is in the continuous range of [0 1] for each sound
 The figure below visualizes the SELDnet input and outputs for one of the recordings in the dataset. The horizontal-axis of all sub-plots for a given dataset represents the same time frames, the vertical-axis for spectrogram sub-plot represents the frequency bins, vertical-axis for SED reference and prediction sub-plots represents the unique sound event class identifier, and for the DOA reference and prediction sub-plots, it represents the azimuth and elevation angles in degrees. The figures represents each sound event class and its associated DOA outputs with a unique color. Similar plot can be visualized on your results using the [provided script](misc_files/visualize_SELD_output.py).
 
 <p align="center">
-   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/SELDnet_output.png" width="1100" title="SELDnet input and output visualization">
+   <img src="https://github.com/sharathadavanne/seld-dcase2019/blob/master/images/SELDnet_output.png" width="1200" title="SELDnet input and output visualization">
 </p>
 
 ## DATASETS
@@ -35,6 +35,8 @@ The participants can choose either of the two or both the following datasets,
 
  * **TAU Spatial Sound Events 2019 - Ambisonic**
  * **TAU Spatial Sound Events 2019 - Microphone Array**
+
+The two datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Development dataset](https://doi.org/10.5281/zenodo.2580091) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2580091.svg)](https://doi.org/10.5281/zenodo.2580091)
 
 These datasets contain recordings from an identical scene, with **TAU Spatial Sound Events 2019 - Ambisonic** providing four-channel First-Order Ambisonic (FOA) recordings while  **TAU Spatial Sound Events 2019 - Microphone Array** provides four-channel directional microphone recordings from a tetrahedral array configuration. Both formats are extracted from the same microphone array, and additional information on the spatial characteristics of each format can be found below. The participants can choose one of the two, or both the datasets based on the audio format they prefer. Both the datasets, consists of a development and evaluation set. The development set consists of 400, one minute long recordings sampled at 48000 Hz, divided into four cross-validation splits of 100 recordings each. The evaluation set consists of 100, one-minute recordings. These recordings were synthesized using spatial room impulse response (IRs) collected from five indoor locations, at 504 unique combinations of azimuth-elevation-distance. Furthermore, in order to synthesize the recordings the collected IRs were convolved with [isolated sound events dataset from DCASE 2016 task 2](http://www.cs.tut.fi/sgn/arg/dcase2016/task-sound-event-detection-in-synthetic-audio#audio-dataset). Finally, to create a realistic sound scene recording, natural ambient noise collected in the IR recording locations was added to the synthesized recordings such that the average SNR of the sound events was 30 dB.
 
@@ -54,14 +56,7 @@ The eleven sound event classes used in the dataset and their corresponding index
 | doorslam | 9 |
 | laughter | 10 |
 
-This mapping is also available as a python dictionary in the `cls_feature_class.py` script.
-
-
-The IR recordings were collected in Finland by Tampere University between 12/2017 - 06/2018. The data collection received funding from the European Research Council, grant agreement 637422 EVERYSOUND.
-
 More details on the recording procedure and dataset can be read on the [DCASE 2019 task webpage](http://dcase.community/challenge2019/task-sound-event-localization-and-detection).
-
-The two datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**](https://doi.org/10.5281/zenodo.2580091) Development dataset [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2580091.svg)](https://doi.org/10.5281/zenodo.2580091)
 
 
 ## Getting Started
@@ -136,7 +131,7 @@ The DOA estimation can be approached as both a regression or a classification ta
 
 ## Submission
 
-* Before submission, make sure your SELD results are right by visualizing the results using `misc_files/visualize_SELD_output.py` script
+* Before submission, make sure your SELD results are correct by visualizing the results using `misc_files/visualize_SELD_output.py` script
 * Make sure the file-wise output you are submitting is produced at 20 ms hop length. At this hop length a 60 s audio file has 3000 frames.
 * Calculate your development score for the four splits using the `calculate_SELD_metrics.py` script. Check if the average results you are obtaining here is comparable to the results you were obtaining during training.
 
@@ -144,7 +139,7 @@ For more information on the submission file formats [check the website](http://d
 
 ## License
 
-This repository is licensed under the TUT License - see the [LICENSE](LICENSE.md) file for details
+This repository is licensed under the TAU License - see the [LICENSE](LICENSE.md) file for details
 
 ## Acknowledgments
 
