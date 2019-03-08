@@ -2,6 +2,8 @@
 # Implements the core metrics from sound event detection evaluation module http://tut-arg.github.io/sed_eval/ and
 # The DOA metrics are explained in the SELDnet paper
 #
+# This script has MIT license
+#
 
 import numpy as np
 from scipy.optimize import linear_sum_assignment

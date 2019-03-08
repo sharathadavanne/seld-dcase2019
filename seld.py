@@ -8,12 +8,12 @@ import numpy as np
 import matplotlib.pyplot as plot
 import cls_feature_class
 import cls_data_generator
-import evaluation_metrics
+from metrics import evaluation_metrics
 import keras_model
 from keras.models import load_model
 import parameter
 import time
-from IPython import embed
+
 plot.switch_backend('agg')
 
 

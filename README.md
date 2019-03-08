@@ -139,7 +139,7 @@ For more information on the submission file formats [check the website](http://d
 
 ## License
 
-This repository is licensed under the TAU License - see the [LICENSE](LICENSE.md) file for details
+Except for the contents in the `metrics` folder that have [MIT License](metrics/LICENSE.md). The rest of the repository is licensed under the [TAU License](LICENSE.md).
 
 ## Acknowledgments
 

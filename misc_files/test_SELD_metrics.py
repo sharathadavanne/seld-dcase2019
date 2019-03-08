@@ -7,8 +7,8 @@ import numpy as np
 import sys
 sys.path.append(os.path.join(sys.path[0], '..'))
 import cls_feature_class
-import evaluation_metrics
-from IPython import embed
+from metrics import evaluation_metrics
+
 
 def description_file_to_regression_label_format(_feat_cls, _desc_file_dict):
     _labels = _feat_cls.get_labels_for_file(_desc_file_dict)

@@ -1,8 +1,7 @@
 import os
-import evaluation_metrics
+from metrics import evaluation_metrics
 import cls_feature_class
 import numpy as np
-from IPython import embed
 
 
 def get_nb_files(_pred_file_list, _group='split'):

@@ -7,14 +7,12 @@ import numpy as np
 import librosa.display
 import sys
 sys.path.append(os.path.join(sys.path[0], '..'))
-import evaluation_metrics
+from metrics import evaluation_metrics
 import cls_feature_class
 import matplotlib.gridspec as gridspec
 import matplotlib.pyplot as plot
 plot.switch_backend('Qt4Agg')
 # plot.switch_backend('TkAgg')
-
-from IPython import embed
 
 
 def collect_classwise_data(_in_dict):
