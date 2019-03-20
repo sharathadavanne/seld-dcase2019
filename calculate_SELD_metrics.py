@@ -27,7 +27,7 @@ def get_nb_files(_pred_file_list, _group='split'):
 
 # INPUT DIRECTORY
 ref_desc_files = '/home/adavanne/taitoSharedData/DCASE2019/dataset/metadata_dev' # reference description directory location
-pred_output_format_files = '/home/adavanne/taitoWorkDir/SELD_DCASE2019/results/64_mic_dev' # predicted output format directory location
+pred_output_format_files = '/home/adavanne/taitoWorkDir/SELD_DCASE2019/results/2_mic_dev' # predicted output format directory location
 
 # Load feature class
 feat_cls = cls_feature_class.FeatureClass()

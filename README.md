@@ -36,7 +36,10 @@ The participants can choose either of the two or both the following datasets,
  * **TAU Spatial Sound Events 2019 - Ambisonic**
  * **TAU Spatial Sound Events 2019 - Microphone Array**
 
-The two datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Development dataset](https://doi.org/10.5281/zenodo.2580091) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2580091.svg)](https://doi.org/10.5281/zenodo.2580091)
+The two datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Development dataset (Version 2)](https://doi.org/10.5281/zenodo.2599196) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2599196.svg)](https://doi.org/10.5281/zenodo.2599196) 
+
+> Dataset was updated on <strong>20 March 2019</strong> to remove labels of sound events that were missing in the audio (version 2). In order to update already downloaded dataset version 1, download only the <code>metadata_dev.zip</code> file from version 2.
+
 
 These datasets contain recordings from an identical scene, with **TAU Spatial Sound Events 2019 - Ambisonic** providing four-channel First-Order Ambisonic (FOA) recordings while  **TAU Spatial Sound Events 2019 - Microphone Array** provides four-channel directional microphone recordings from a tetrahedral array configuration. Both formats are extracted from the same microphone array, and additional information on the spatial characteristics of each format can be found below. The participants can choose one of the two, or both the datasets based on the audio format they prefer. Both the datasets, consists of a development and evaluation set. The development set consists of 400, one minute long recordings sampled at 48000 Hz, divided into four cross-validation splits of 100 recordings each. The evaluation set consists of 100, one-minute recordings. These recordings were synthesized using spatial room impulse response (IRs) collected from five indoor locations, at 504 unique combinations of azimuth-elevation-distance. Furthermore, in order to synthesize the recordings the collected IRs were convolved with [isolated sound events dataset from DCASE 2016 task 2](http://www.cs.tut.fi/sgn/arg/dcase2016/task-sound-event-detection-in-synthetic-audio#audio-dataset). Finally, to create a realistic sound scene recording, natural ambient noise collected in the IR recording locations was added to the synthesized recordings such that the average SNR of the sound events was 30 dB.
 
@@ -119,8 +122,8 @@ Where \<job-id\> is a unique identifier which is used for output filenames (mode
 
 | Dataset | Error rate | F score| DOA error | Frame recall |
 | ----| --- | --- | --- | --- |
-| Ambisonic | 0.34 | 79.7 % | 30.8&deg; | 84.3 % |
-| Microphone Array |0.37 | 78.5 % | 35.4&deg; | 81.6 % |
+| Ambisonic | 0.34 | 79.9 % | 28.5&deg; | 85.4 % |
+| Microphone Array |0.35 | 80.0 % | 30.8&deg; | 84.0 % |
 
 **Note:** The reported baseline system performance is not exactly reproducible due to varying setups. However, you should be able to obtain very similar results.
 
