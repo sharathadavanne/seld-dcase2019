@@ -109,6 +109,15 @@ python seld.py <task-id> <job-id>
 ```
 Where \<job-id\> is a unique identifier which is used for output filenames (models, training plots). You can use any number or string for this.
 
+In order to get baseline results on the development set for Microphone array recordings, you can run the following command
+```
+python seld.py 2
+```
+Similarly, for Ambisonic format baseline results, run the following command
+```
+python seld.py 4
+```
+
 * By default, the code runs in `quick_test = True` mode. This trains the network for 2 epochs on only 2 mini-batches. Once you get to run the code sucessfully, set `quick_test = False` in `parameter.py` script and train on the entire data.
 
 * The code also plots training curves, intermediate results and saves models in the `model_dir` path provided by the user in `parameter.py` file.
