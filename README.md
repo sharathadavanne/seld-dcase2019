@@ -1,8 +1,10 @@
 
 # DCASE 2019: Sound event localization and detection (SELD) task
-Sound event localization and detection (SELD) is the combined task of identifying the temporal onset and offset of a sound event, tracking the spatial location when active, and further associating a textual label describing the sound event. As part of [DCASE 2019](http://dcase.community/challenge2019/index), we are organizing an [SELD task](http://dcase.community/challenge2019/task-sound-event-localization-and-detection) with a multi-reverberant dataset synthesized using real-life impulse response (IR) collected at five different locations. This github page shares the benchmark method, SELDnet, and the dataset for the task. The paper describing the SELDnet can be found on [IEEExplore](https://ieeexplore.ieee.org/document/8567942 'Paper on IEEE Xplore') and on [Arxiv](https://arxiv.org/pdf/1807.00129.pdf 'Paper on Arxiv').
+Sound event localization and detection (SELD) is the combined task of identifying the temporal onset and offset of a sound event, tracking the spatial location when active, and further associating a textual label describing the sound event. As part of [DCASE 2019](http://dcase.community/challenge2019/index), we are organizing an [SELD task](http://dcase.community/challenge2019/task-sound-event-localization-and-detection) with a [multi-room reverberant dataset synthesized using real-life impulse response (IR) collected at five different environments](https://arxiv.org/pdf/1905.08546.pdf 'Paper on Arxiv'). This github page shares the benchmark method, SELDnet, and the dataset for the task. The paper describing the SELDnet can be found on [IEEExplore](https://ieeexplore.ieee.org/document/8567942 'Paper on IEEE Xplore') and on [Arxiv](https://arxiv.org/pdf/1807.00129.pdf 'Paper on Arxiv'). The dataset, baseline method and benchmark scores have been described in the task paper available [here](https://arxiv.org/pdf/1905.08546.pdf 'Paper on Arxiv').
    
-If you are using this code or the datasets in any format, then please consider citing the following paper
+If you are using this code or the datasets in any format, then please consider citing the following two papers
+
+> Sharath Adavanne, Archontis Politis, Joonas Nikunen and Tuomas Virtanen, "A multi-room reverberant dataset for sound event localization and detection" submitted in the Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE 2019)
 
 > Sharath Adavanne, Archontis Politis, Joonas Nikunen and Tuomas Virtanen, "Sound event localization and detection of overlapping sources using convolutional recurrent neural network" in IEEE Journal of Selected Topics in Signal Processing (JSTSP 2018)
 
@@ -36,11 +38,6 @@ The participants can choose either of the two or both the following datasets,
  * **TAU Spatial Sound Events 2019 - Ambisonic**
  * **TAU Spatial Sound Events 2019 - Microphone Array**
 
-The two datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Development dataset (Version 2)](https://doi.org/10.5281/zenodo.2599196) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2599196.svg)](https://doi.org/10.5281/zenodo.2599196) 
-
-> Dataset was updated on <strong>20 March 2019</strong> to remove labels of sound events that were missing in the audio (version 2). In order to update already downloaded dataset version 1, download only the <code>metadata_dev.zip</code> file from version 2.
-
-
 These datasets contain recordings from an identical scene, with **TAU Spatial Sound Events 2019 - Ambisonic** providing four-channel First-Order Ambisonic (FOA) recordings while  **TAU Spatial Sound Events 2019 - Microphone Array** provides four-channel directional microphone recordings from a tetrahedral array configuration. Both formats are extracted from the same microphone array, and additional information on the spatial characteristics of each format can be found below. The participants can choose one of the two, or both the datasets based on the audio format they prefer. Both the datasets, consists of a development and evaluation set. The development set consists of 400, one minute long recordings sampled at 48000 Hz, divided into four cross-validation splits of 100 recordings each. The evaluation set consists of 100, one-minute recordings. These recordings were synthesized using spatial room impulse response (IRs) collected from five indoor locations, at 504 unique combinations of azimuth-elevation-distance. Furthermore, in order to synthesize the recordings the collected IRs were convolved with [isolated sound events dataset from DCASE 2016 task 2](http://www.cs.tut.fi/sgn/arg/dcase2016/task-sound-event-detection-in-synthetic-audio#audio-dataset). Finally, to create a realistic sound scene recording, natural ambient noise collected in the IR recording locations was added to the synthesized recordings such that the average SNR of the sound events was 30 dB.
 
 The eleven sound event classes used in the dataset and their corresponding index values required for the submission format are as following
@@ -59,8 +56,13 @@ The eleven sound event classes used in the dataset and their corresponding index
 | doorslam | 9 |
 | laughter | 10 |
 
-More details on the recording procedure and dataset can be read on the [DCASE 2019 task webpage](http://dcase.community/challenge2019/task-sound-event-localization-and-detection).
+More details on the recording procedure and dataset can be read on the [DCASE 2019 task webpage](http://dcase.community/challenge2019/task-sound-event-localization-and-detection) or on the [task description paper](https://arxiv.org/pdf/1905.08546.pdf 'Paper on Arxiv').
 
+The two development datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Development dataset (Version 2)](https://doi.org/10.5281/zenodo.2599196) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2599196.svg)](https://doi.org/10.5281/zenodo.2599196) 
+
+> Dataset was updated on <strong>20 March 2019</strong> to remove labels of sound events that were missing in the audio (version 2). In order to update already downloaded dataset version 1, download only the <code>metadata_dev.zip</code> file from version 2.
+
+The evaluation datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Evaluation dataset](https://doi.org/10.5281/zenodo.3066124) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3066124.svg)](https://doi.org/10.5281/zenodo.3066124) 
 
 ## Getting Started
 
