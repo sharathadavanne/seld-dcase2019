@@ -60,8 +60,8 @@ class SELDMetrics(object):
         self._D += D
         self._I += I
 
-    def f1_overall_1sec(self, O, T):
-        new_size = int(np.ceil(O.shape[0] / self._block_size))
+    def f1_overall_1sec(self, O, T):        
+        new_size = int(np.ceil(float(O.shape[0]) / self._block_size))
         O_block = np.zeros((new_size, O.shape[1]))
         T_block = np.zeros((new_size, O.shape[1]))
         for i in range(0, new_size):
@@ -69,8 +69,8 @@ class SELDMetrics(object):
             T_block[i, :] = np.max(T[int(i * self._block_size):int(i * self._block_size + self._block_size - 1), :], axis=0)
         return self.f1_overall_framewise(O_block, T_block)
 
-    def er_overall_1sec(self, O, T):
-        new_size = int(O.shape[0] / self._block_size)
+    def er_overall_1sec(self, O, T):        
+        new_size = int(np.ceil(float(O.shape[0]) / self._block_size))
         O_block = np.zeros((new_size, O.shape[1]))
         T_block = np.zeros((new_size, O.shape[1]))
         for i in range(0, new_size):
@@ -206,7 +206,7 @@ def er_overall_framewise(O, T):
 def f1_overall_1sec(O, T, block_size):
     if len(O.shape) == 3:
         O, T = reshape_3Dto2D(O), reshape_3Dto2D(T)
-    new_size = int(np.ceil(O.shape[0] / block_size))
+    new_size = int(np.ceil(float(O.shape[0]) / block_size))
     O_block = np.zeros((new_size, O.shape[1]))
     T_block = np.zeros((new_size, O.shape[1]))
     for i in range(0, new_size):
@@ -218,7 +218,7 @@ def f1_overall_1sec(O, T, block_size):
 def er_overall_1sec(O, T, block_size):
     if len(O.shape) == 3:
         O, T = reshape_3Dto2D(O), reshape_3Dto2D(T)
-    new_size = int(O.shape[0] / (block_size))
+    new_size = int(np.ceil(float(O.shape[0]) / block_size))
     O_block = np.zeros((new_size, O.shape[1]))
     T_block = np.zeros((new_size, O.shape[1]))
     for i in range(0, new_size):
