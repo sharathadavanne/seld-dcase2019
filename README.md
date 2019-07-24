@@ -1,5 +1,9 @@
 
 # DCASE 2019: Sound event localization and detection (SELD) task
+> The DCASE 2019 Challenge has now ended, the results of all the submissions can be seen [here](http://dcase.community/challenge2019/task-sound-event-localization-and-detection-results). 
+
+> Check [our new repository](https://github.com/sharathadavanne/seld-net) for sound event localization, detection and tracking of multiple stationary and moving sources. This repository also includes datasets with stationary sources in multi-reverberant scenario synthesized using Ambisonic and Circular Array formats. Additionally, it includes datasets with sources moving in varying angular velocities in Ambisonic format.
+
 Sound event localization and detection (SELD) is the combined task of identifying the temporal onset and offset of a sound event, tracking the spatial location when active, and further associating a textual label describing the sound event. As part of [DCASE 2019](http://dcase.community/challenge2019/index), we are organizing an [SELD task](http://dcase.community/challenge2019/task-sound-event-localization-and-detection) with a [multi-room reverberant dataset synthesized using real-life impulse response (IR) collected at five different environments](https://arxiv.org/pdf/1905.08546.pdf 'Paper on Arxiv'). This github page shares the benchmark method, SELDnet, and the dataset for the task. The paper describing the SELDnet can be found on [IEEExplore](https://ieeexplore.ieee.org/document/8567942 'Paper on IEEE Xplore') and on [Arxiv](https://arxiv.org/pdf/1807.00129.pdf 'Paper on Arxiv'). The dataset, baseline method and benchmark scores have been described in the task paper available [here](https://arxiv.org/pdf/1905.08546.pdf 'Paper on Arxiv').
    
 If you are using this code or the datasets in any format, then please consider citing the following two papers
