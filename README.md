@@ -8,7 +8,7 @@ Sound event localization and detection (SELD) is the combined task of identifyin
    
 If you are using this code or the datasets in any format, then please consider citing the following two papers
 
-> Sharath Adavanne, Archontis Politis, Joonas Nikunen and Tuomas Virtanen, "A multi-room reverberant dataset for sound event localization and detection" submitted in the Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE 2019)
+> Sharath Adavanne, Archontis Politis and Tuomas Virtanen, "A multi-room reverberant dataset for sound event localization and detection" submitted in the Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE 2019)
 
 > Sharath Adavanne, Archontis Politis, Joonas Nikunen and Tuomas Virtanen, "Sound event localization and detection of overlapping sources using convolutional recurrent neural network" in IEEE Journal of Selected Topics in Signal Processing (JSTSP 2018)
 
