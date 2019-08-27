@@ -66,7 +66,10 @@ The two development datasets can be downloaded from the link - [**TAU Spatial So
 
 > Dataset was updated on <strong>20 March 2019</strong> to remove labels of sound events that were missing in the audio (version 2). In order to update already downloaded dataset version 1, download only the <code>metadata_dev.zip</code> file from version 2.
 
-The evaluation datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Evaluation dataset](https://doi.org/10.5281/zenodo.3066124) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3066124.svg)](https://doi.org/10.5281/zenodo.3066124) 
+The evaluation datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Evaluation dataset](https://doi.org/10.5281/zenodo.3377088) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3377088.svg)](https://doi.org/10.5281/zenodo.3377088) 
+
+> Dataset was updated on 26 August 2019: Now that the task has ended, we are releasing the reference labels for the evaluation dataset (version 2).
+
 
 ## Getting Started
 
