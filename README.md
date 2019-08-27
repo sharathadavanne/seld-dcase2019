@@ -68,7 +68,7 @@ The two development datasets can be downloaded from the link - [**TAU Spatial So
 
 The evaluation datasets can be downloaded from the link - [**TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array**, Evaluation dataset](https://doi.org/10.5281/zenodo.3377088) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3377088.svg)](https://doi.org/10.5281/zenodo.3377088) 
 
-> Dataset was updated on 26 August 2019: Now that the task has ended, we are releasing the reference labels for the evaluation dataset (version 2).
+> Dataset was updated on <strong>26 August 2019</strong>: Now that the task has ended, we are releasing the reference labels for the evaluation dataset (version 2).
 
 
 ## Getting Started
